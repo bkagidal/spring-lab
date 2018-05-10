@@ -21,6 +21,10 @@
 	<bean id="myCoach" class="com.lab.ioc.BaseballCoach">
 		<constructor-arg ref="myFortuneService"></constructor-arg>
 	 </bean>
+	 
+	 <bean id="myCricketCoach" class = "com.lab.di.CricketCoach">
+	 	<property name="fortuneService" ref="myFortuneService"></property>
+	 </bean>
 
 </beans>
 

@@ -8,10 +8,10 @@ public class MyApp_Ioc {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-		Coach theCoach = context.getBean("myCoach", Coach.class);
+		Coach theCoach = context.getBean("myTrackCoach", Coach.class);
 
 		System.out.println(theCoach.getDailyWorkout());
-		//System.out.println();
+		System.out.println(theCoach.getDailyFrtune());
 		context.close();
 
 	}

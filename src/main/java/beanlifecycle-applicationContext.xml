@@ -14,7 +14,7 @@
     <bean id="myFortuneService" class="com.lab.di.HappyFortuneService">
 	</bean>
  
-	<bean id="myTrackCoach" class="com.lab.ioc.TrackCoach" scope="prototype">
+	<bean id="myTrackCoach" class="com.lab.ioc.TrackCoach" init-method="doMyStartupStuff" destroy-method="doMyClenupStuff">
 		<constructor-arg ref="myFortuneService" ></constructor-arg>
 	</bean> 
 

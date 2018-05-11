@@ -4,13 +4,12 @@ import com.lab.di.FortuneService;
 
 public class TrackCoach implements Coach {
 
-	
 	private FortuneService fortuneService;
-	
-	
-	public TrackCoach(){
-		
+
+	public TrackCoach() {
+
 	}
+
 	public TrackCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
@@ -20,7 +19,16 @@ public class TrackCoach implements Coach {
 	}
 
 	public String getDailyFrtune() {
-		return "Just do it "+fortuneService.getFortune();
+		return "Just do it " + fortuneService.getFortune();
+	}
+
+	public void doMyStartupStuff() {
+		System.out.println("TrackCoach: inside method doMyStartupStuff");
+	}
+
+	public void doMyClenupStuff() {
+
+		System.out.println("TrackCoach: inside method doMyClenupStuff");
 	}
 
 }

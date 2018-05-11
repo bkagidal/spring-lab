@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 	
-	
+	@Autowired
 	private FortuneService fortuneService;
 	
 	public TennisCoach() {
@@ -17,10 +17,11 @@ public class TennisCoach implements Coach {
 		return "Practice 30 min Backhand volley";
 	}
 
-	@Autowired
+	//commented to test Field level injection
+	/*@Autowired
 	public void setFortuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
-	}
+	}*/
 
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
